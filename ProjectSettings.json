@@ -1,0 +1,13 @@
+{
+  "name": "Gyaru RPG",
+  "version": "0.1.0",
+  "description": "RPG Pixel estilo Gyaru para móvil",
+  "productName": "GyaruRPG",
+  "companyName": "GyaruGames",
+  "gammaColorSpace": true,
+  "renderPipeline": "Universal",
+  "targetPlatforms": ["Android", "iOS"],
+  "pixelSize": 32,
+  "targetFramerate": 60,
+  "screenOrientation": "Portrait"
+}
