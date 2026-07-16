@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gyaru RPG - Pixel Edition 👘✨</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="gameContainer" class="game-container">
+        <!-- Main Menu -->
+        <div id="mainMenu" class="menu">
+            <div class="menu-content">
+                <h1 class="game-title">🌸 Gyaru RPG 🌸</h1>
+                <p class="subtitle">Pixel Edition</p>
+                <div class="menu-buttons">
+                    <button class="btn btn-primary" onclick="startGame()">Jugar</button>
+                    <button class="btn btn-secondary" onclick="showCredits()">Créditos</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Game Screen -->
+        <div id="gameScreen" class="game-screen" style="display: none;">
+            <!-- Combat Arena -->
+            <div class="combat-arena">
+                <!-- Enemy -->
+                <div class="character enemy-side">
+                    <div class="character-sprite enemy-sprite">🧛‍♀️</div>
+                    <div class="character-name" id="enemyName">Hater</div>
+                    <div class="health-bar">
+                        <div class="health-fill" id="enemyHealth"></div>
+                    </div>
+                    <div class="health-text" id="enemyHPText">100/100</div>
+                </div>
+
+                <!-- Player -->
+                <div class="character player-side">
+                    <div class="character-sprite player-sprite">👘</div>
+                    <div class="character-name" id="playerName">Gyaru</div>
+                    <div class="health-bar">
+                        <div class="health-fill" id="playerHealth"></div>
+                    </div>
+                    <div class="health-text" id="playerHPText">100/100</div>
+                </div>
+            </div>
+
+            <!-- Combat Log -->
+            <div class="combat-log">
+                <div id="logContent" class="log-content">
+                    <p class="log-entry">⚔️ ¡Comienza el combate!</p>
+                </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="action-buttons">
+                <button class="btn btn-attack" onclick="playerAttack()">⚔️ Ataque</button>
+                <button class="btn btn-skill" onclick="playerStyleBomb()">✨ Style Bomb</button>
+                <button class="btn btn-heal" onclick="playerHeal()">💚 Heal</button>
+            </div>
+
+            <!-- Status Info -->
+            <div class="status-info">
+                <p>Nivel: <span id="playerLevel">1</span></p>
+                <p>Estilo Gyaru: <span id="gyaruStyle">15</span></p>
+                <p>Puntos: <span id="score">0</span></p>
+            </div>
+        </div>
+
+        <!-- Game Over Screen -->
+        <div id="gameOverScreen" class="game-over" style="display: none;">
+            <div class="game-over-content">
+                <h2 id="gameOverTitle">¡VICTORIA!</h2>
+                <p id="gameOverMessage">¡Lo hiciste con estilo! ✨💅</p>
+                <div class="final-stats">
+                    <p>Puntos: <span id="finalScore">0</span></p>
+                    <p>Nivel Gyaru: <span id="finalGyaruLevel">1</span></p>
+                </div>
+                <div class="menu-buttons">
+                    <button class="btn btn-primary" onclick="startGame()">Jugar de Nuevo</button>
+                    <button class="btn btn-secondary" onclick="goToMenu()">Menú Principal</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
